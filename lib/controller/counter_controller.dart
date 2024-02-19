@@ -12,6 +12,17 @@ class CounterController extends GetxController {
     update();
   }
 
+  //Another way to increment function
+  void increment({required String group, required int point}) {
+    if (group == 'A') {
+      pointsGroupA += point;
+      update();
+    } else {
+      pointsGroupB += point;
+      update();
+    }
+  }
+
   void reset() {
     pointsGroupA = 0;
     pointsGroupB = 0;
